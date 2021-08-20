@@ -1,0 +1,190 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    /*background-color: red;*/
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+    
+}
+
+.wrapper__header{
+        width: 100%;
+        height: 17px;
+}
+
+.wrapper__header .title .sub__title{
+    color: #55b2d4;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.wrapper__header .title .story{
+    color: black;
+    font: Sci Fied Bitmap;
+    font-size: 8px;
+    font-weight: 8px;
+    width: 400px;
+}
+
+.wrapper__header .line{
+    color: black;
+    width: 464px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.wrapper__word{
+    width: 222px;
+    height: 168px;
+    background-color: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.wrapper__word .title{
+    width: 44px;
+    height: 15p;
+    font-size: 11px;
+    font-style: normal;
+    font-family:Malgun Gothic;
+    font-weight: bold;
+    line-height: 11px;
+    text-align: center;
+}
+
+.wrapper__word .content{
+    width: 90px;
+    height: 13px;
+    font-size: 10px;
+    font-style: normal;
+    font-family: Malgun Gothic;
+    font-weight: bold;
+    text-align: center;
+    color: #999999;
+}
+
+.wrapper__word .search__box{
+    width: 136px;
+    height: 24px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-family: Malgun Gothic;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 15px;
+    margin-right: 10px;
+}
+
+.wrapper__word .button{
+    width: 38px;
+    height: 24px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-family: Malgun Gothic;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 15px;
+    text-align: center;
+}
+
+.wrapper__word .result{
+    width: 26px;
+    height: 15px;
+    font-style: normal;
+    font-size: 11px;
+    font-family: Malgun Gothic;
+    font-weight: bold;
+    text-align: center;
+    color: #999999;
+}
+
+.wrapper__lotto{
+    width: 222px;
+    height:168px;
+    background-color: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.wrapper__lotto .title{
+    width: 36px;
+    height: 15px;
+    font-size: 11px;
+    font-family: Malgun Gothic;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+}
+
+.wrapper__lotto .content{
+    width: 77px;
+    height: 13px;
+    font-size: 10px;
+    font-style: normal;
+    font-family: Malgun Gothic;
+    font-weight: bold;
+    text-align: center;
+    color: #999999;
+    margin-bottom: 10px;
+}
+
+.wrapper__lotto .lotto__box{
+    width: 130px;
+    height: 21px;
+    margin-top: 5px;
+    background: #FFE400;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-family: Malgun Gothic;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 13px;
+    text-align: center;
+}
+
+.wrapper__lotto .button{
+    width: 62px;
+    height: 24px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-family: Malgun Gothic;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 15px;
+    text-align: center;
+    margin-top: 10px;
+}

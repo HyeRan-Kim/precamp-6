@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <title>function</title>
+       <script>
+           function getToken (){
+           const token = String(Math.floor(Math.random()*1000000)).padStart(6,"0")
+           const tokenColor = "#" + token
+           document.getElementById("num").innerText=token
+           document.getElementById("num").style.color = tokenColor
+    }
+       </script>
+</head>
+<body>
+    <div id ="num">000000</div>
+    <button onclick="getToken()"class="button">인증번호전송</button>
+</body>
+</html>

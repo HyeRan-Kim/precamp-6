@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <title>function</title>
+       <script>
+    //        function getToken (){
+    //        const token = String(Math.floor(Math.random()*1000000)).padStart(6,"0")
+    //        const tokenColor = "#" + token
+    //        document.getElementById("num").innerText=token
+    //        document.getElementById("num").style.color = tokenColor
+
+    //        let timer = 180
+    // setInterval(()=>{
+    //     if(timer>=0){
+    //         const minutes = String(Math.floor(timer/60)).padStart(2, "0")
+    //         const seconds = String(timer % 60).padStart(2,"0")
+    //         const time = minutes + ":" + seconds
+    //         document.getElementById("num2").innerText = time
+
+                // if(timer==0){
+                //     document.getElementById("button2").setAttribute("disabled","false")
+                // }
+    //         timer -= 1
+    //     }
+    // } ,1000)
+    // }
+            function getToken (){
+                const token = String(Math.floor(Math.random()*1000000)).padStart(6,"0")
+                const tokenColor = "#" + token
+                document.getElementById("num").innerText=token
+                document.getElementById("num").style.color = tokenColor
+
+                let timer = 10
+            setInterval(()=>{
+                if(timer>=0){
+                    
+                    document.getElementById("num2").innerText = timer
+                    
+                    if(timer==0){
+                        document.getElementById("button2").setAttribute("disabled", "false")
+                    }
+                    timer = timer -1
+                    
+                }
+                
+            } ,1000)
+            }
+
+
+       </script>
+</head>
+<body>
+    <div id ="num">000000</div>
+    <button onclick="getToken()"class="button">인증번호전송</button>
+    <!-- <div id ="num2">03:00</div> -->
+    <div id ="num2">10</div>
+    <button onclick="setInterval()" id="button2">인증완료</button>
+</body>
+</html>

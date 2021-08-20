@@ -1,0 +1,115 @@
+*{
+    margin: 0px; /*전체기본세팅*/
+    box-sizing: content-box; /*전체기본세팅*/
+}
+/*
+홈화면에 딱맞게 세팅하는법
+
+home.css에
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+index.css에
+iframe{
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+
+*/
+
+html, body{
+    width: 100%;
+    height: 100%;
+    ;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.wrapper__header {
+    width: 100%;
+    height: 48px;
+    
+}
+
+.wrapper__body {
+    width: 100%;
+    height: 270px;
+
+}
+
+.wrapper__header .title .sub__title{
+    color: #55b2d4;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.wrapper__header .title .story{
+    color: black;
+    font: Sci Fied Bitmap;
+    font-size: 8px;
+    font-weight: 8px;
+    width: 400px;
+}
+
+.wrapper__header .line{
+    color: black;
+    width: 464px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.wrapper__header .content{
+    color: #999999;
+    font-size: 11px;
+    width: 400px;
+}
+
+.wrapper__body .sub__title{
+    color: #55b2d4;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.wrapper__body .title {
+    padding-bottom: 15px;
+}
+
+.wrapper__body .title .story{
+    color: black;
+    font: Sci Fied Bitmap;
+    font-size: 8px;
+    font-weight: 8px;
+    width: 400px;
+}
+
+.wrapper__body .story{
+    color: black;
+    font: Sci Fied Bitmap;
+    font-size: 8px;
+    font-weight: 8px;
+    width: 400px;
+}
+
+.wrapper__body .videoBox{
+    background-color: #C4C4C4;
+    width: 464px;
+    height: 240px;
+}

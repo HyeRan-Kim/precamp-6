@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>회원가입</title>
+    <script>
+        function checkValuedation(){
+              //이메일 내용이 채워져있는지, 비밀번호1이 채워져있는지, 비밀번호2도
+            const email = document.getElementById("email").value
+            const password1 = document.getElementById("password1").value
+            const password2 = document.getElementById("password2").value
+
+            if(email !== "" && password1 !== "" && password2 !== ""){
+                document.getElementById("signup").style="background-color : yellow;"
+            } else{
+                document.getElementById("signup").style=""
+            }
+        }
+
+        function checkEmail(){
+            const email = document.getElementById("email").value
+               if(email.includes("@")==false){
+                    alert("이메일이 정확하지 않습니다.")
+               } 
+            }     
+
+       
+        // function changeEmail( ){
+        //     //이메일 내용이 채워져있는지, 비밀번호1이 채워져있는지, 비밀번호2도
+        //     const email = document.getElementById("email").value
+        //     const password1 = document.getElementById("password1").value
+        //     const password2 = document.getElementById("password2").value
+
+        //     if(email !== "" && password1 !== "" && password2 !== ""){
+        //         document.getElementById("signup").style="background-color : yellow;"
+        //     } else{
+        //         document.getElementById("signup").style=""
+        //     }
+        // }
+        
+        // function changePassword1( ){
+        //     //이메일 내용이 채워져있는지, 비밀번호1이 채워져있는지, 비밀번호2도
+        //     const email = document.getElementById("email").value
+        //                 const password1 = document.getElementById("password1").value
+        //                 const password2 = document.getElementById("password2").value
+
+        //                 if(email !== "" && password1 !== "" && password2 !== ""){
+        //                     document.getElementById("signup").style="background-color : yellow;"
+        //                 } else{
+        //         document.getElementById("signup").style=""
+        //     }
+        // }
+        
+        // function changePassword2( ){
+        //      //이메일 내용이 채워져있는지, 비밀번호1이 채워져있는지, 비밀번호2도
+        //      const email = document.getElementById("email").value
+        //     const password1 = document.getElementById("password1").value
+        //     const password2 = document.getElementById("password2").value
+
+        //     if(email !== "" && password1 !== "" && password2 !== ""){
+        //         document.getElementById("signup").style="background-color : yellow;"
+        //     } else{
+        //         document.getElementById("signup").style=""
+        //     }
+        // }
+    </script>
+</head>
+<body>
+        <input id="email" type="text" placeholder="이메일을 입력해 주세요." onchange="checkValuedation()" onkeyup="onchange()"><br/>
+        <input id="password1" type="password" placeholder="비밀번호를 입력해 주세요." onchange="checkValuedation()" onkeyup="onchange()"><br/>
+        <input id="password2" type="password" placeholder="비밀번호를 입력해 주세요." onchange="checkValuedation()" onkeyup="onchange()"><br/>
+        <button id="signup" onclick="checkEmail()">회원가입</button>
+        
+</body>
+</html>

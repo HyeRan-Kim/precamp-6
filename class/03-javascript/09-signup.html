@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Document</title>
+    <script>
+        function checkEmail(){
+            const email = document.getElementById("email").value
+            if(email.includes("@")==false){
+                alert("이메일이 올바르지 않습니다.")
+            }
+        }
+
+        function checkPassword(){
+            const password = document.getElementById("password").value
+            const rePassword = document.getElementById("rePassword").value
+            if(password !== rePassword){
+                alert("비밀번호가 일치하지 않습니다.")
+            }
+        }
+        function changePhone(){
+            const phone1 = document.getElementById("phone1").value
+            if(phone1.length===3){
+                document.getElementById("phone2").focus()
+            }
+        }
+
+        function changePhone2(){
+            const phone2= document.getElementById("phone2").value
+            if(phone1.length===4){
+                document.getElementById("phone3").focus()
+            }
+        }
+        function checkPhone(){
+            const phone1 = document.getElementById("phone1").value
+            const phone2= document.getElementById("phone2").value
+            const phone3= document.getElementById("phone3").value
+
+            if(phone1 !=="" && phone2 !=="" && phone3 !==""){
+                document.getElementById("num").style="background-color=yellow;"
+            }
+            else{
+                document.getElementById("num").style=""
+            }
+        }
+
+        function getToken (){
+           const token = String(Math.floor(Math.random()*1000000)).padStart(6,"0")
+           document.getElementById("num").innerText=token
+           
+          let timer = 180
+            setInterval(()=>{
+                if(timer>=0){
+                    const minutes = String(Math.floor(timer/60)).padStart(2, "0")
+                    const seconds = String(timer % 60).padStart(2,"0")
+                    const time = minutes + ":" + seconds
+                    document.getElementById("time").innerText = time
+
+                if(timer==0){
+                    document.getElementById("time").setAttribute("disabled","false")
+                }
+                    timer -= 1
+                }
+            } ,1000)
+    }
+        
+    </script>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <input id="email" type="text" placeholder="이메일을 입력해 주세요.">
+    <input id="name" type="text" placeholder="이름을 입력해 주세요.">
+    <input id="password" type="text" placeholder="비밀번호를 입력해주세요.">
+    <input id="rePassword" type="text" placeholder="비밀번호를 다시 입력해 주세요.">
+    <input id="phone1" type="text" size="3" onchange="changePhone()" onkeyup="onchange()">-
+    <input id="phone2" type="text" size="4" onchange="changePhone2()" onkeyup="onchange2()">-
+    <input id="phone2" type="text" size="4">
+    <div id=num>000000</div><button onclick="getToken()"class="button">인증번호전송</button>
+    <div id=time>03:00</div><button>인증확인</button>
+    <select>
+        <option disabled selected>지역을 선택하세요.</option>
+        <option>서울</option>
+        <option>경기</option>
+        <option>인천</option>
+    </select>
+    <input type="radio" name="gender"/>여성<input type="radio" name="aaa"/>남성<br/><br/>
+        <input type="checkbox"/>이용약관 개인정보 수집 및 이용, 마케팅 활용 선택에 모두 동의합니다.
+        <hr>
+        <button id="signup" onclick="checkEmail, checkPassword">가입하기</button>
+</body>
+</html>
